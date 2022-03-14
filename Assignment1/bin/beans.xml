@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="customer" class="com.cg.demo.Customer">
+		<constructor-arg name="CustomerId" value="123" />
+		<constructor-arg name="CustomerName" value="SaiTeja" />
+		<constructor-arg name="CustomerContact" value="70936" />
+		<constructor-arg name="CustomerAddress" ref="address" />
+
+	</bean>
+	
+	<bean id="address" class="com.cg.demo.Address">
+	
+		<constructor-arg name="Street" value="whitefield" />
+		<constructor-arg name="City" value="Banglore" />
+		<constructor-arg name="State" value="Andhrapradesh" />
+		<constructor-arg name="Country" value="india" />
+		<constructor-arg name="Zip" value="1431" />
+		
+	</bean>
+</beans>
